@@ -1,0 +1,59 @@
+.product-form {
+    width: 25rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(206, 206, 206, 0.5);
+    padding: 15px 20px;
+}
+
+.product-form label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.product-form input {
+    border-radius: 5px !important;
+    padding: 3px;
+}
+
+.product-form input[type="file"] {
+    border: 0;
+}
+
+.product-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+}
+
+.product__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product__price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.product__discounted-price {
+    color: orange;
+}
+
+.product__description {
+    text-align: center;
+}
+
+.product__seller {
+    display: inline-block;
+    padding: 3px 5px;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: rgba(153, 205, 50, 0.521);
+}

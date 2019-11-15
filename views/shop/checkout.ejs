@@ -1,0 +1,42 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <main>
+        <ul class="cart__item-list">
+            <% products.forEach(p => { %>
+                <li class="cart__item">
+                    <div class="cart__item-title-image">
+                        <h1><%= p.productId.title %></h1>
+                        <img width=100% src="<%= p.productId.imageUrl %>" alt="<%= p.productId.title %>">
+                    </div>
+                    <div class="cart__item-title-image">
+                        <h2>Quantity: <%= p.quantity %></h2>
+                        <h2>Unit Price: <%= p.productId.discountedPrice %></h2>
+                        <h2>Total: <%= p.productId.discountedPrice * p.quantity %></h2>
+                    </div>
+                </li>
+            <% }) %>
+        </ul> 
+        <div>
+            <h2 class="centered">Total: <%= totalSum %></h2>
+        </div>
+        <div class="centered">
+            <form method='POST' action='/create-order'>
+                <input type='hidden' name='_csrf' value='<%= csrfToken %>'>
+                <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_xz3uWBYlR0fxxf4NY1GYffsd00JzFu4Up1"
+                    data-amount="<%= totalSum * 100 %>"
+                    data-name="Your Order"
+                    data-description="This is all the items you ordered. Is it correct?"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto"
+                    data-currency="sgd">
+                </script>
+            </form>
+        </div>
+    </main>
+    <%- include('../includes/end.ejs') %>

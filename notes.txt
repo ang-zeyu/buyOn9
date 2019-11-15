@@ -1,0 +1,39 @@
+Pagination -----
+
+use skip and limit to.. well limit.
+SQL: LIMIT and OFFSET query parameters
+
+<%- include(dadadaada, { variables to pass })
+.countDocuments() is pretty fast...
+
+Async requests AJAX - async javascript and xml
+- response typically json, requests proceed as per normal
+- no need for a form
+- vanilla js events syntax. eventHandler(this), this refers to the dom node.
+
+- DELETE - app/router.delete
+    delete requests have no body.
+    fetch('...', { method, headers: { 'csrfToken':yadayada } })
+        csurf package looks into headers, query parameters and body
+    res.status(200/500).json()
+
+
+Stripe --------- payment api
+Collect > verify > charge > manage payments (refunds, disputes) > process order in app
+
+Client > send data to stripe > stripe sends token of confirmation to client > client sends to server
+> server receives confirmation token > sends payment details to stripe > stripe process payments and send final confirmation
+
+Structure at this point:
+Primary:
+    models
+    controllers
+    routes
+    views
+extras:
+    middleware - isAuth
+    util
+storage:
+    static storage directories - public, images
+    non-static directories - data
+
