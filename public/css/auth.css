@@ -1,0 +1,20 @@
+.login-form {
+  width: 25rem;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(179, 245, 179, 0.5);
+  padding: 15px 20px;
+}
+
+.login-form-label {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.login-form-input {
+  border-radius: 5px !important;
+  padding: 3px;
+}
