@@ -7,3 +7,19 @@ with a slight twist: an auto discount feature for sellers, where items listed ar
 
 - `npm install`
 - `npm start`
+
+## Screenshots
+
+![](./screens/add-product.png)
+
+![](./screens/cart.png)
+
+![](./screens/my-products.png)
+
+![](./screens/shop.png)
+
+![](./screens/orders.png)
+
+![](./screens/payment.png)
+
+![](./screens/strip-payment.png)
