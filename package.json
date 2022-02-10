@@ -12,7 +12,7 @@
   "author": "Ang Ze Yu",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.3"
   },
   "dependencies": {
